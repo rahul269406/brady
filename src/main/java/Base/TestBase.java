@@ -27,10 +27,6 @@ public class TestBase {
     protected static ChromeOptions chromeOptions;
     protected static Logger log;
 
-    /*
-     * protected ITestResult result; protected ExtentReports extent; protected
-     * ExtentTest extentTest;
-     */
     public TestBase() {
 
         try {

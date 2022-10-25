@@ -5,11 +5,12 @@
 2. Another way, go to TestRunners src/test/java/runners/TestRunners.java  file and click on run button
 3. lastly , you can run via maven too by executing the mvn test command
 
+**Important Note Before Execution** :- Please change the WORKSAPCE_PATH as per your machine in location src/main/java/Utilities/TestUtils.java
 
 
 **POM**
 
-Page package is maintaining  the objects of home and login pages
+Pages package is maintaining  the objects of home and login pages
 
 **Additional point** 
 
