@@ -1,0 +1,111 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-10-25T18:31:17.452Z",
+        "line": 4,
+        "name": "Login to the application",
+        "description": "",
+        "id": "validate-login-functionality;login-to-the-application",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 19271000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on the home page of the application",
+            "match": {
+              "location": "StepDefinitions.MyStepdefs.userIsOnTheHomePageOfTheApplication()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3104000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user click on login button",
+            "match": {
+              "location": "StepDefinitions.MyStepdefs.userClickOnLoginButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6078000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user enter the \"rahul269406@gmail.com\" and \"Sakshi@1988\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "rahul269406@gmail.com",
+                  "offset": 16
+                },
+                {
+                  "val": "Sakshi@1988",
+                  "offset": 44
+                }
+              ],
+              "location": "StepDefinitions.MyStepdefs.userEnterTheAnd(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 312000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user click on submit button",
+            "match": {
+              "location": "StepDefinitions.MyStepdefs.userClickOnSubmitButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3809000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "verify user is logged in",
+            "match": {
+              "location": "StepDefinitions.MyStepdefs.verifyUserIsLoggedIn()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8374000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Close the Browser",
+            "match": {
+              "location": "StepDefinitions.MyStepdefs.closeTheBrowser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test"
+          }
+        ]
+      }
+    ],
+    "name": "Validate login functionality",
+    "description": "",
+    "id": "validate-login-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/login.feature",
+    "tags": []
+  }
+]
