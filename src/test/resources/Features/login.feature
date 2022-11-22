@@ -1,4 +1,4 @@
-Feature: Validate login functionality
+Feature: Validate login functionality and given scenarios
 
   @test
   Scenario Outline: Test Login functionality of the application
