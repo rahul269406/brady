@@ -1,15 +1,17 @@
 package Utilities;
 
+import Pages.AsiaPage;
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 
+import javax.xml.bind.Element;
 import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class TestUtils {
 
@@ -43,5 +45,23 @@ public class TestUtils {
 		}
 
 	}
+	public static String findLastExchange(WebDriver driver, String arg0) throws InterruptedException {
+		String rate = "";
+		AsiaPage asiaPage= new AsiaPage();
+		List<WebElement> lists = asiaPage.getMultipleTableRows();
+		int i=1;
+		 for( int j=0;j<= lists.size()-1;j++) {
+			 Thread.sleep(3000);
+					 String name = lists.get(j).getText();
+					 if (name.equalsIgnoreCase(arg0)) {
+						 rate = driver.findElement(By.xpath("//*[@id='js-screener-container']/div[4]/table/tbody/tr[" + i + "]/td[2]")).getText();
+						 System.out.println(rate);
+						 break;
+					 }
+					 i++;
+
+		 }
+return rate;
+		}
 
 }

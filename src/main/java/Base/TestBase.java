@@ -1,8 +1,8 @@
 package Base;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
@@ -74,9 +74,6 @@ public class TestBase {
         } else if (browserName.equalsIgnoreCase("FF")) {
             System.setProperty("webdriver.gecko.driver", "//src//drivers//geckodriver.exe");
             return new FirefoxDriver();
-        } else if (browserName.equalsIgnoreCase("IE")) {
-            System.setProperty("webdriver.ie.driver", TestUtils.WORKSAPCE_PATH + "//src//drivers//IEDriverServer.exe");
-            return new InternetExplorerDriver();
         }
         return null;
     }
@@ -84,6 +81,17 @@ public class TestBase {
     public void tearDownMain() {
         driver.manage().deleteAllCookies();
         driver.close();
+    }
+    public void setValueToPropertyFile(String Key, String Value){
+
+        properties = new Properties();
+        try(OutputStream outputStream = new FileOutputStream(System.getProperty("user.dir") + "/target/ExchangeRates.properties",true)){
+            properties.setProperty(Key, Value);
+            properties.store(outputStream, null);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
 }

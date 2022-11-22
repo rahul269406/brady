@@ -13,11 +13,13 @@ public class HomePage extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//header//a[@title='Discover your dream Career']")
+	@FindBy(xpath = "//*[contains(text(), 'Forex Market')]")
 	WebElement logo;
 
-	@FindBy(xpath = "//*[@id='cmpwelcomebtnyes']/a")
+	@FindBy(xpath = "//*[@id='overlap-manager-root']/div/div[2]/div/div/div/div[2]")
 	WebElement AlertBox;
+
+
 
 
 	public boolean isLogoDisplayed() {
