@@ -1,7 +1,5 @@
 package StepDefinitions;
 
-
-
 import Base.TestBase;
 import Pages.AsiaPage;
 import Pages.HomePage;
@@ -21,7 +19,7 @@ public class MyStepdefs extends TestBase {
     public static String enteredEmail;
 
     @Given("^User is on the home page of the application$")
-    public void userIsOnTheHomePageOfTheApplication() throws InterruptedException {
+    public void userIsOnTheHomePageOfTheApplication()  {
 
 
         System.out.println("================ started SUITE ================");
@@ -66,7 +64,7 @@ public class MyStepdefs extends TestBase {
         LoginPage loginPage =new LoginPage();
         loginPage.clickUserIcon();
         boolean flag=loginPage.verifyUserLoggedIn(enteredEmail);
-
+        TestUtils.takeScreenShot(driver);
         Assert.assertTrue(flag, "User is logged in successfully");
     }
 
