@@ -14,8 +14,6 @@ import io.cucumber.java.en.When;
 import org.testng.Assert;
 
 import java.util.HashSet;
-import java.util.List;
-import java.util.Properties;
 import java.util.Set;
 
 public class MyStepdefs extends TestBase {
