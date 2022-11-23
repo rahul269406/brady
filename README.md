@@ -2,7 +2,8 @@
 
 **Important Note Before Execution** :- Please change the WORKSAPCE_PATH as per your machine location. you can find this in  src/main/java/Utilities/TestUtils.java  
 
-This is one time process and is must for successfull execution of scripts
+This is one time process and is must for successfull execution of scripts. 
+Also please make sure your chromedriver is upto date while running scripts .Otherwise you need to update the chromedriver and then rerun the test cases.
 
 
 **Project Execution steps:-**
